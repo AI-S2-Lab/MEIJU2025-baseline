@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="028a17cc-93f4-4e8c-8d6e-bbc8566c3a80" name="CVPR">
+        <fileTransfer rootFolder="/sdc/home/zuohaolin" accessType="SFTP" host="183.175.12.112" port="22" sshConfigId="ba4e7652-af0e-404b-a42f-83dfb0f7487d" sshConfig="zuohaolin@183.175.12.112:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="6d8000ee-24c6-46f4-94ca-1b7c2395b840" name="MEIJU">
+        <fileTransfer rootFolder="/sdc/home/zuohaolin" accessType="SFTP" host="183.175.12.112" port="22" sshConfigId="310c0b4a-9543-490d-bbbb-076dfb0bbf7b" sshConfig="zuohaolin@183.175.12.112:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
