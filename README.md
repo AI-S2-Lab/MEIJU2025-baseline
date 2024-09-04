@@ -4,7 +4,7 @@ The baseline system provided for the ICASSP 2025 MEIJU Challenge serves as a sta
 
 # Result
 
-[//]: # (插入表格)
+
 | Track | Dataset  | emo_metric | int_metric | joint_metic 
 | :---: |:--------:|:----------:|:----------:|:-----------:
 | 1 | English  |   0.3174   |   0.3944   |   0.3516    
