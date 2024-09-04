@@ -27,7 +27,9 @@ avoid the influence of randomness. It is worth noting that the results of Track 
     First you should change the config file of feature extraction in `config.py`.
 
     Then, follow the steps in `scripts/run_release.sh` to preprocess the dataset and extract multimodal features.
-
+    
+    Please note: MER refers to the dataset of MER 2024, which is a challenge for multimodal emotion recognition. Our feature extraction method was inspired by the work of MER 2024, but was not used with that dataset. If you encounter references to MER during the feature extraction stage, they should be replaced with the dataset for this challenge.
+    
     After completing the feature extraction, modify the configuration file under `data/config/` to update the dataset path.
 
 *   Training MEIJU
