@@ -4,7 +4,16 @@ The baseline system provided for the ICASSP 2025 MEIJU Challenge serves as a sta
 
 # Result
 
-coming soon.
+[//]: # (插入表格)
+| Track | Dataset  | emo_metric | int_metric | joint_metic 
+| :---: |:--------:|:----------:|:----------:|:-----------:
+| 1 | English  |   0.3174   |   0.3944   |   0.3516    
+| 1 | Mandarin |   0.4263   |   0.4788   |   0.4509    
+| 2 | English  |   0.5342   |   0.5412   |   0.5377
+| 2 | Mandarin |   0.6016   |   0.6215   |   0.6115
+
+All the above results are obtained by running the baseline code with default hyper-parameters. The values of the metrics are the average of 3 runs to 
+avoid the influence of randomness. It is worth noting that the results of Track 1 are obtained from training and testing only on supervised data.
 
 # Environment
 
