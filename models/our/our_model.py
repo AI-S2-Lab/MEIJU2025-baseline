@@ -126,7 +126,7 @@ class ourModel(BaseModel):
         self.temperature = opt.temperature
 
         if self.isTrain:
-            # self.load_pretrained_encoder(opt)
+            self.load_pretrained_encoder(opt)
             if not opt.use_ICL:
                 self.criterion_ce = torch.nn.CrossEntropyLoss()
                 self.criterion_focal = torch.nn.CrossEntropyLoss()
@@ -171,17 +171,17 @@ class ourModel(BaseModel):
             return OrderedDict([('module.' + key, value) for key, value in state_dict.items()])
 
         if self.isTrain:
-            print('Load no parameters from pretrained encoder network')
-            # print('[ Init ] Load parameters from pretrained encoder network')
-            # f = lambda x: transform_key_for_parallel(x)
-            # self.netEmoA.load_state_dict(f(self.pretrained_encoder.netEmoA.state_dict()))
-            # self.netEmoV.load_state_dict(f(self.pretrained_encoder.netEmoV.state_dict()))
-            # self.netEmoL.load_state_dict(f(self.pretrained_encoder.netEmoL.state_dict()))
-            # self.netIntA.load_state_dict(f(self.pretrained_encoder.netIntA.state_dict()))
-            # self.netIntV.load_state_dict(f(self.pretrained_encoder.netIntV.state_dict()))
-            # self.netIntL.load_state_dict(f(self.pretrained_encoder.netIntL.state_dict()))
-            # self.netEmoFusion.load_state_dict(f(self.pretrained_encoder.netEmoFusion.state_dict()))
-            # self.netIntFusion.load_state_dict(f(self.pretrained_encoder.netIntFusion.state_dict()))
+            # print('Load no parameters from pretrained encoder network')
+            print('[ Init ] Load parameters from pretrained encoder network')
+            f = lambda x: transform_key_for_parallel(x)
+            self.netEmoA.load_state_dict(f(self.pretrained_encoder.netEmoA.state_dict()))
+            self.netEmoV.load_state_dict(f(self.pretrained_encoder.netEmoV.state_dict()))
+            self.netEmoL.load_state_dict(f(self.pretrained_encoder.netEmoL.state_dict()))
+            self.netIntA.load_state_dict(f(self.pretrained_encoder.netIntA.state_dict()))
+            self.netIntV.load_state_dict(f(self.pretrained_encoder.netIntV.state_dict()))
+            self.netIntL.load_state_dict(f(self.pretrained_encoder.netIntL.state_dict()))
+            self.netEmoFusion.load_state_dict(f(self.pretrained_encoder.netEmoFusion.state_dict()))
+            self.netIntFusion.load_state_dict(f(self.pretrained_encoder.netIntFusion.state_dict()))
 
     def load_from_opt_record(self, file_path):
         opt_content = json.load(open(file_path, 'r'))
