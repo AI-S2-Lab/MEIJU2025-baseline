@@ -23,11 +23,16 @@ avoid the influence of randomness. It is worth noting that the results of Track 
 # Feature Extraction
 In our baseline, we use the following features:
 
-For acoustic: we use the wav2vec model to extract the acoustic features. The link of pre-trained model is : https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec
+Textual Feature: To extract word-level textual features in English and Mandarin, we employ RoBERTa models that have been pre-trained on data from each respective language. The embedding size of the textual features for both languages is 768. The link of pre-trained model is : 
+English: https://huggingface.co/FacebookAI/roberta-base;
+Mandarin: https://huggingface.co/hfl/chinese-roberta-wwm-ext
 
-For visual: we use the ResNet-50 model to extract the visual features. The link of pre-trained model is : https://huggingface.co/microsoft/resnet-50
+Acoustic Feature: We extract frame-level acoustic features using the wav2vec model pre-trained on large-scale Chinese and English audio data. The embedding size of the acoustic features is 512.
+The link of pre-trained model is : https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec
 
-For text: we use the RoBERTa model to extract the text features. The link of pre-trained model is : English: https://huggingface.co/FacebookAI/roberta-base; Mandarin: https://huggingface.co/hfl/chinese-roberta-wwm-ext
+Visual Feature: We employ OpenCV tool to extract scene pictures from each video, capturing frames at a 10-frame interval. Subsequently, we utilize the Resnet-50 model to generate frame-level features for the extracted scene pictures in the videos. The embedding size of the visual features is 342.
+The link of pre-trained model is : https://huggingface.co/microsoft/resnet-50
+
 
 # Usage
 
