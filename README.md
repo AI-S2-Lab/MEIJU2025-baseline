@@ -20,6 +20,15 @@ avoid the influence of randomness. It is worth noting that the results of Track 
     python 3.7.0
     pytorch >= 1.0.0
 
+# Feature Extraction
+In our baseline, we use the following features:
+
+For acoustic: we use the wav2vec model to extract the acoustic features. The link of pre-trained model is : https://github.com/facebookresearch/fairseq/tree/main/examples/wav2vec
+
+For visual: we use the ResNet-50 model to extract the visual features. The link of pre-trained model is : https://huggingface.co/microsoft/resnet-50
+
+For text: we use the RoBERTa model to extract the text features. The link of pre-trained model is : English: https://huggingface.co/FacebookAI/roberta-base; Mandarin: https://huggingface.co/hfl/chinese-roberta-wwm-ext
+
 # Usage
 
 *   Feature extraction
