@@ -70,6 +70,6 @@ CC BY-NC 4.0.
 
 Copyright (c) 2024 S2Lab, Inner Mongolia University, Hohhot, China.
 
-# Thanks to
+# Acknowledgements
 The tools of feature extraction are inspired by the work of MER 2024. The Github URL of MER 2024 is: https://github.com/zeroQiaoba/MERTools/tree/master/MER2024.
 
