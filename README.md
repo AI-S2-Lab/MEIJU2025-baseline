@@ -33,6 +33,7 @@ The link of pre-trained model is : https://github.com/facebookresearch/fairseq/t
 Visual Feature: We employ OpenCV tool to extract scene pictures from each video, capturing frames at a 10-frame interval. Subsequently, we utilize the Resnet-50 model to generate frame-level features for the extracted scene pictures in the videos. The embedding size of the visual features is 342.
 The link of pre-trained model is : https://huggingface.co/microsoft/resnet-50
 
+More method and tools can be found in `https://github.com/zeroQiaoba/MERTools/tree/master/MER2024`.
 
 # Usage
 
@@ -68,3 +69,7 @@ Furthermore, the model for Track1 only provides code for the supervised part. Pa
 CC BY-NC 4.0.
 
 Copyright (c) 2024 S2Lab, Inner Mongolia University, Hohhot, China.
+
+# Acknowledgements
+The tools of feature extraction are inspired by the work of MER 2024. The Github URL of MER 2024 is: https://github.com/zeroQiaoba/MERTools/tree/master/MER2024.
+

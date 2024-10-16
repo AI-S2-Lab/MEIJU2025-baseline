@@ -47,7 +47,7 @@ class ourModel(BaseModel):
         parser.add_argument('--best_cvNo', type=int, default=1, help='best cvNo of pretrain model')
         # parameter of Transformer Encoder
         parser.add_argument('--Transformer_head', type=int, default=2, help='head of Transformer_head')
-        parser.add_argument('--Transformer_layers', type=int, default=1, help='layer of Transformer_head')
+        parser.add_argument('--Transformer_layers', type=int, default=1, help='layer of Transformer')
         # parameter of multi-head attention
         parser.add_argument('--attention_head', type=int, default=1, help='head of multi-head attention')
         parser.add_argument('--attention_dropout', type=float, default=0., help='head of multi-head attention')
