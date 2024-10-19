@@ -50,6 +50,18 @@ Folder**.
 Additionally, the feature dimensions and other parameters in the `.sh` file should remain consistent with those used
 during the training of the model.
 
+# 2024.10.20 Update
+
+We have released the Codalab Link for the MEIJU Challenge:
+
+Track 1 - English: https://codalab.lisn.upsaclay.fr/competitions/20392
+
+Track 1 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20393
+
+Track 2 - English: https://codalab.lisn.upsaclay.fr/competitions/20394
+
+Track 2 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20395
+
 # Result
 
 | Track | Dataset  | emo_metric | int_metric | joint_metic 
