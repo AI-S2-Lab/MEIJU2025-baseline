@@ -201,10 +201,11 @@ class ourModel(BaseModel):
         self.visual = input['V_feat'].float().to(self.device)
         self.lexical = input['L_feat'].float().to(self.device)
 
-        # Emotion label
-        self.emo_label = input['emo_label'].to(self.device)
-        # Intent label
-        self.int_label = input['int_label'].to(self.device)
+        if self.isTrain:
+            # Emotion label
+            self.emo_label = input['emo_label'].to(self.device)
+            # Intent label
+            self.int_label = input['int_label'].to(self.device)
 
     def forward(self):
         """Run forward pass; called by both functions <optimize_parameters> and <test>."""
