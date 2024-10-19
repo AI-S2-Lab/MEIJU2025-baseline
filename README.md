@@ -11,8 +11,7 @@ We have updated 7 files, and participants need to download these new files local
 
 First, we created `test_baseline.py` to load the trained model, perform predictions on the test set, and save the
 predicted results as `submission.csv`.
-Participants are required to submit the `submission.csv` file to the corresponding
-Codalab platform.
+Participants need to package the submission.csv file in `.zip` format and submit it to the Codalab platform.
 
 And then, we updated `data/test_dataset.py` to load the test set.
 
@@ -34,7 +33,10 @@ to
 to ensure the proper functioning of the testing program.
 
 Finally, we updated four `.sh`
-files: `scripts/Track1/English_our_balance_testing.sh`, `scripts/Track1/Mandarin_our_balance_testing.sh`, `scripts/Track2/English_our_ICL_testing.sh`,
+files: 
+`scripts/Track1/English_our_balance_testing.sh`, 
+`scripts/Track1/Mandarin_our_balance_testing.sh`, 
+`scripts/Track2/English_our_ICL_testing.sh`,
 and `scripts/Track2/Mandarin_our_ICL_testing.sh`.
 Taking ``scripts/Track1/English_our_balance_testing.sh`` as an example, participants can generate the final submission
 file by executing the following command:
@@ -43,8 +45,7 @@ file by executing the following command:
 bash scripts/Track1/English_our_balance_testing.sh {gpu_id}
 ```
 
-It is important to note that the `name` parameter in the `.sh` file corresponds to **The Name of The Folder Located
-under Checkpoints that Contains The Trained Model**, and `cvNo` refers to **The Number of The Model within The `name`
+It is important to note that the `name` parameter in the `.sh` file corresponds to **The Checkpoint Folder Name of The Trained Model**, and `cvNo` refers to **The Number of The Model within The `name`
 Folder**.
 Additionally, the feature dimensions and other parameters in the `.sh` file should remain consistent with those used
 during the training of the model.
