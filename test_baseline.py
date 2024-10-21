@@ -20,11 +20,24 @@ def make_path(path):
         os.makedirs(path)
 
 
+
 def eval(model, val_iter):
     model.eval()
     total_filename = []
     total_emo_pred = []
     total_int_pred = []
+
+    emotions = ['happy', 'surprise', 'sad', 'disgust', 'anger', 'fear', 'neutral']
+    intents = ['questioning', 'agreeing', 'acknowledging', 'encouraging', 'consoling', 'suggesting', 'wishing', 'neutral']
+
+    emo2idx, idx2emo = {}, {}
+    int2idx, idx2int = {}, {}
+
+    for ii, emo_label in enumerate(emotions): emo2idx[emo_label] = ii
+    for ii, emo_label in enumerate(emotions): idx2emo[ii] = emo_label
+
+    for ii, int_label in enumerate(intents): int2idx[int_label] = ii
+    for ii, int_label in enumerate(intents): idx2int[ii] = int_label
 
     for i, data in enumerate(val_iter):  # inner loop within one epoch
         model.set_input(data)  # 解包数据并预处理
@@ -34,8 +47,12 @@ def eval(model, val_iter):
 
         filename = data['int2name']
 
-        total_emo_pred.append(emo_pred)
-        total_int_pred.append(int_pred)
+        # 将预测的整数值转换为对应的标签
+        emo_pred_labels = [idx2emo[pred] for pred in emo_pred]
+        int_pred_labels = [idx2int[pred] for pred in int_pred]
+
+        total_emo_pred.append(emo_pred_labels)
+        total_int_pred.append(int_pred_labels)
         total_filename.append(filename)
 
     # 整合所有预测结果
