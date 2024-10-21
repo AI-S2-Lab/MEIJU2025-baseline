@@ -5,6 +5,48 @@ their solutions for the Multimodal Emotion and Intent Joint Understanding tasks.
 straightforward yet effective, providing participants with a solid foundation upon which they can build and improve. The
 baseline code will be updated at any time.
 
+# 2024.10.21 Update
+
+During the process of submitting test results, many participants reported the same issue: after selecting the correct
+submission file as prompted, the webpage remained stuck on the submission page, with the "Submit" button becoming
+disabled, and no error or success message was shown. After our urgent investigation, we discovered the following:
+
+1. All testers using Windows computers with Chrome/Edge browsers encountered this issue, and none were able to
+   successfully submit;
+2. Testers using Mac computers with Safari browsers were able to submit their test files successfully and view the
+   results;
+3. One tester using a Mac computer with Chrome browser version 129.0.6668.101 was able to submit and view the results
+   successfully (this is currently the only known successful case using Chrome);
+4. Testers using mobile devices were able to submit test files successfully and view the results.
+
+Based on these findings, we believe the issue is related to the operating system and Chrome version, rather than the
+project itself. Therefore, we recommend that participants use mobile devices or Safari browsers to submit their test
+results for the time being. We will contact Codalab officials to find a more convenient solution as soon as possible.
+
+To compensate for the one-day delay caused by this issue, we are increasing the daily submission limit from 3 to 5, and
+the total number of submissions from 65 to 80.
+As the modification of submission limits required redeploying the test system, we have restarted the test website. The new link is as follows:
+
+1. Track 1 - English: https://codalab.lisn.upsaclay.fr/competitions/20426
+2. Track 1 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20425
+3. Track 2 - English: https://codalab.lisn.upsaclay.fr/competitions/20424
+4. Track 2 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20423
+
+**Additionally**, we have updated the `test_baseline.py` file, so please make sure to synchronize the latest changes.
+
+
+# 2024.10.20 Update
+
+We have released the Codalab Link for the MEIJU Challenge:
+
+<del>Track 1 - English: https://codalab.lisn.upsaclay.fr/competitions/20392<del>
+
+<del>Track 1 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20393<del>
+
+<del>Track 2 - English: https://codalab.lisn.upsaclay.fr/competitions/20394<del>
+
+<del>Track 2 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20395<del>
+
 # 2024.10.19 Update
 
 We have updated 7 files, and participants need to download these new files locally:
@@ -33,9 +75,9 @@ to
 to ensure the proper functioning of the testing program.
 
 Finally, we updated four `.sh`
-files: 
-`scripts/Track1/English_our_balance_testing.sh`, 
-`scripts/Track1/Mandarin_our_balance_testing.sh`, 
+files:
+`scripts/Track1/English_our_balance_testing.sh`,
+`scripts/Track1/Mandarin_our_balance_testing.sh`,
 `scripts/Track2/English_our_ICL_testing.sh`,
 and `scripts/Track2/Mandarin_our_ICL_testing.sh`.
 Taking ``scripts/Track1/English_our_balance_testing.sh`` as an example, participants can generate the final submission
@@ -45,31 +87,20 @@ file by executing the following command:
 bash scripts/Track1/English_our_balance_testing.sh {gpu_id}
 ```
 
-It is important to note that the `name` parameter in the `.sh` file corresponds to **The Checkpoint Folder Name of The Trained Model**, and `cvNo` refers to **The Number of The Model within The `name`
+It is important to note that the `name` parameter in the `.sh` file corresponds to **The Checkpoint Folder Name of The
+Trained Model**, and `cvNo` refers to **The Number of The Model within The `name`
 Folder**.
 Additionally, the feature dimensions and other parameters in the `.sh` file should remain consistent with those used
 during the training of the model.
 
-# 2024.10.20 Update
-
-We have released the Codalab Link for the MEIJU Challenge:
-
-Track 1 - English: https://codalab.lisn.upsaclay.fr/competitions/20392
-
-Track 1 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20393
-
-Track 2 - English: https://codalab.lisn.upsaclay.fr/competitions/20394
-
-Track 2 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20395
-
 # Result
 
 | Track | Dataset  | emo_metric | int_metric | joint_metic 
-| :---: |:--------:|:----------:|:----------:|:-----------:
-| 1 | English  |   0.3174   |   0.3944   |   0.3516    
-| 1 | Mandarin |   0.4263   |   0.4788   |   0.4509    
-| 2 | English  |   0.5342   |   0.5412   |   0.5377
-| 2 | Mandarin |   0.6016   |   0.6215   |   0.6115
+|:-----:|:--------:|:----------:|:----------:|:-----------:
+|   1   | English  |   0.3174   |   0.3944   |   0.3516    
+|   1   | Mandarin |   0.4263   |   0.4788   |   0.4509    
+|   2   | English  |   0.5342   |   0.5412   |   0.5377    
+|   2   | Mandarin |   0.6016   |   0.6215   |   0.6115    
 
 All the above results are obtained by running the baseline code with default hyper-parameters. The values of the metrics
 are the average of 3 runs to
