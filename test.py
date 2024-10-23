@@ -1,14 +1,13 @@
-import os
+import pandas as pd
 
+# Load the CSV file
+file_path = 'submission.csv'
+df = pd.read_csv(file_path)
 
-if __name__ == '__main__':
-    root_path = input('请输入需要导出会议所在的根目录：')
-    meeting_name = os.listdir(root_path)
+# Replace 'emo_pred' and 'int_pred' columns' values with 'neutral'
+df['emo_pred'] = 'neutral'
+df['int_pred'] = 'neutral'
 
-    save_file = os.path.join(root_path, 'save_file.txt')
-    with open(save_file, 'w', encoding='utf-8') as txt_save:
-        for meeting in meeting_name:
-            txt_save.write(meeting)
-            txt_save.write('\n')
-
-        txt_save.close()
+# Save the updated dataframe to a new CSV file
+output_path = 'submission.csv'
+df.to_csv(output_path, index=False)
