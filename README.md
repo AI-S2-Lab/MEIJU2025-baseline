@@ -5,6 +5,18 @@ their solutions for the Multimodal Emotion and Intent Joint Understanding tasks.
 straightforward yet effective, providing participants with a solid foundation upon which they can build and improve. The
 baseline code will be updated at any time.
 
+# 2024.10.23 Update
+
+Regarding the issue of participants being unable to correctly submit test results, we have provided some additional
+solutions and notes in this update:
+
+1. Based on information from the Codalab discussion platform, using the "Firefox" browser or increasing the ZIP file
+   compression level can resolve the issue of the webpage becoming unresponsive after submission. You can find the
+   relevant solution on the official forum: https://github.com/codalab/codalab-competitions/issues/3503
+2. When submitting test results, participants must compress the generated `submission.csv` file directly into a `.zip` file.
+   Submitting a `.csv` file alone **will not work** for the test. We have provided an example of a submission for your
+   reference, please check the `submission.zip` file.
+
 # 2024.10.21 Update
 
 During the process of submitting test results, many participants reported the same issue: after selecting the correct
@@ -25,7 +37,8 @@ results for the time being. We will contact Codalab officials to find a more con
 
 To compensate for the one-day delay caused by this issue, we are increasing the daily submission limit from 3 to 5, and
 the total number of submissions from 65 to 80.
-As the modification of submission limits required redeploying the test system, we have restarted the test website. The new link is as follows:
+As the modification of submission limits required redeploying the test system, we have restarted the test website. The
+new link is as follows:
 
 1. Track 1 - English: https://codalab.lisn.upsaclay.fr/competitions/20426
 2. Track 1 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20425
@@ -33,7 +46,6 @@ As the modification of submission limits required redeploying the test system, w
 4. Track 2 - Mandarin: https://codalab.lisn.upsaclay.fr/competitions/20423
 
 **Additionally**, we have updated the `test_baseline.py` file, so please make sure to synchronize the latest changes.
-
 
 # 2024.10.20 Update
 
